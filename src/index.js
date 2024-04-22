@@ -24,6 +24,18 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+   // Los Angeles
+  let madridElement = document.querySelector("#madrid");
+  if (madridElement) {
+    let madridDateElement = madridElement.querySelector(".date");
+    let madridTimeElement = madridElement.querySelector(".time");
+    let madridTime = moment().tz("Europe/Madrid");
+
+    madridDateElement.innerHTML = madridTime.format("MMMM	Do YYYY");
+    madridTimeElement.innerHTML = madridTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
